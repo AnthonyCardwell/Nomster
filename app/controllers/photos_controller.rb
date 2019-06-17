@@ -15,7 +15,7 @@ def show
   end
 
   def photo_params
-    params.require(:photo).permit(:Picture)
+    params.require(:photo).permit(:caption, :Picture)
   end
 
 end
