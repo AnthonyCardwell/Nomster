@@ -52,7 +52,12 @@
   </div>
 </div>
 
-
+<div>
+<% @place.photos.each do |photo| %>
+  <%= image_tag photo.picture.url %>
+  <%= photo.caption %>
+<% end %>
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -84,6 +89,12 @@
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
   Add a comment
+</button>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#photomodal">
+  Add a Photo
 </button>
 </div>
 
