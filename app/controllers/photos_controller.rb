@@ -14,9 +14,9 @@ def create
      # @comment = Comment.new
       #@photo = Photo.new
  # end
-
+private
   def photo_params
-    params.require(:photo).permit(:caption, :picture)
+    params.require(:photo).permit(:caption, :pictures)
   end
 
 end
