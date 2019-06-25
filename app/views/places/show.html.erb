@@ -54,7 +54,7 @@
 
 <div>
 <% @place.photos.each do |photo| %>
-  <%= image_tag photo.pictures.url %>
+  <%= image_tag photo.pictures.to_s, class: 'show-image-size' %>
   <%= photo.caption %>
 <% end %>
 </div>
@@ -127,7 +127,7 @@
           <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
             <div class="modal-body">
                     <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
-                    <%= f.input :picture %>
+                    <%= f.input :pictures %>
                     <%= f.input :caption %>
                 </div>
                 <div class="modal-footer">
@@ -139,3 +139,5 @@
     </div>
   </div>
 </div>
+
+ <% end %>
