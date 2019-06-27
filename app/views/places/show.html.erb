@@ -54,10 +54,8 @@
 
 <div>
 <% @place.photos.each do |photo| %>
-  <% if photo.pictures.url %>
-    <%= image_tag photo.picture.url %>
-    <%= photo.caption %>
-  <% end %>
+  <%= image_tag photo.pictures.to_s, class: 'show-image-size' %>
+  <%= photo.caption %>
 <% end %>
 </div>
 
