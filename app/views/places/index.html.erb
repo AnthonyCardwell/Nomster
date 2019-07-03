@@ -50,4 +50,12 @@
 </div>
 <% end %>
   </div>
+
+<div class="col-12 col-sm-6">
+  <% if place.photos.present? %>
+  <%= image_tag place.photos.first.pictures %>
+  <%= photo.caption %>
+<% end %>
+</div>
+
 <% end %>
