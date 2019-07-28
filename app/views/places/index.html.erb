@@ -48,13 +48,14 @@
     <small><%= place.comments.last.user.email %></small>
   </blockquote>
 </div>
+<div class="col-12 col-sm-6">
+  <% if place.photos.present? %>
+  <%= image_tag place.photos.first.picture.url %>
+<% end %>
+</div>
 <% end %>
   </div>
 
-<div class="col-12 col-sm-6">
-  <% if place.photos.present? %>
-  <%= place.photos.first.picture %>
-<% end %>
-</div>
+
 
 <% end %>
